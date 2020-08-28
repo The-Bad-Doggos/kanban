@@ -1,3 +1,5 @@
+This project is a kanban board that was created to submit to the Mintbean JavaScript Bootcamp Olympics Hackathon.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
