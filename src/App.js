@@ -1,6 +1,5 @@
-
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
 import Column from "./components/Column";
@@ -12,8 +11,8 @@ class App extends Component {
     this.state = {
       // In state, we want an obj that will contain the TITLE, DESCRIPTION, PRIORITY, CURRENT STATE (To Do, Doing, Done) for each task
 
-			tasks: [],
-			columns: ["To Do", "Doing", "Done"],
+      tasks: [],
+      columns: ["To Do", "Doing", "Done"],
     };
   }
 
@@ -46,12 +45,12 @@ class App extends Component {
 
         <Navbar />
         <Landing />
-        
-				{this.state.columns.map(entry => {
-					return <Column name={entry} />
-				})}
-        
-				<AddList />
+
+        {this.state.columns.map((entry) => {
+          return <Column name={entry} />;
+        })}
+
+        <AddList />
       </div>
     );
   }
