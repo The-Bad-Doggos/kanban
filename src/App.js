@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import Landing from "./components/Landing.js";
 import Something from "./Something"
 
 class App extends Component {
 	constructor() {
+		super();
 		this.state = {
 			// In state, we want an obj that will contain the TITLE, DESCRIPTION, PRIORITY, CURRENT STATE (To Do, Doing, Done) for each task
 
@@ -16,7 +17,7 @@ class App extends Component {
 		return (
 			 <div className="App">
 				{/* Show a landing page to give the user a brief overview of site */}
-
+				<Landing />
 				{/* Show an empty kanban board with 3 columns, and a + to add more */}
 
 				{/* each column should have a "+" to add cards */}
