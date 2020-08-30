@@ -1,50 +1,54 @@
-import React, { Component } from 'react';
-import './App.css';
-
-import Something from "./Something"
+import React, { Component } from "react";
+import "./App.css";
+import Landing from "./components/Landing";
+import Navbar from "./components/Navbar";
+import Column from "./components/Column";
+import AddList from "./components/AddList";
 
 class App extends Component {
-	constructor() {
-		this.state = {
-			// In state, we want an obj that will contain the TITLE, DESCRIPTION, PRIORITY, CURRENT STATE (To Do, Doing, Done) for each task
+  constructor() {
+    super();
+    this.state = {
+      // In state, we want an obj that will contain the TITLE, DESCRIPTION, PRIORITY, CURRENT STATE (To Do, Doing, Done) for each task
 
-			tasks: []
-		};
-	}
-	
-	render() {
-		return (
-			 <div className="App">
-				{/* Show a landing page to give the user a brief overview of site */}
+      tasks: [],
+    };
+  }
 
-				{/* Show an empty kanban board with 3 columns, and a + to add more */}
+  render() {
+    return (
+      <div className="App">
+        {/* Show a landing page to give the user a brief overview of site */}
 
-				{/* each column should have a "+" to add cards */}
+        {/* Show an empty kanban board with 3 columns, and a + to add more */}
 
-				{/* Maybe?? A modal pop up for the user to fill out the details of tasks (title, description, priority); ok/submit button */}
+        {/* each column should have a "+" to add cards */}
 
-				{/* .onSubmit Update this.setState with task */}
+        {/* Maybe?? A modal pop up for the user to fill out the details of tasks (title, description, priority); ok/submit button */}
 
-				{/* Create a card template */}
+        {/* .onSubmit Update this.setState with task */}
 
-				{/* pass the this.state.task to <Card /> to render in the appropriate column */}
+        {/* Create a card template */}
 
-				{/* "X" button on the card to delete card; .onDelete remove from this.state.task */}
+        {/* pass the this.state.task to <Card /> to render in the appropriate column */}
 
-				{/* Click and drag to move cards between columns */}
+        {/* "X" button on the card to delete card; .onDelete remove from this.state.task */}
 
-				{/* Click and drag to move cards within columns */}
+        {/* Click and drag to move cards between columns */}
 
-				{/* Delete a whole column -- Error handling: If col.length > 0 Error popup "please select where to move cards before deleting?" */}
+        {/* Click and drag to move cards within columns */}
 
-				{/* Edit the title/description/priority of a card */}
+        {/* Delete a whole column -- Error handling: If col.length > 0 Error popup "please select where to move cards before deleting?" */}
 
-				<Something />
-				<h1>The Bad Doggos Were Here</h1>
-			 </div>
-		);
+        {/* Edit the title/description/priority of a card */}
 
-	}
+        <Landing />
+        <Navbar />
+        <Column />
+        <AddList />
+      </div>
+    );
+  }
 }
 
 export default App;
