@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       // In state, we want an obj that will contain the TITLE, DESCRIPTION, PRIORITY, CURRENT STATE (To Do, Doing, Done) for each task
 
-      tasks: [],
+			tasks: [],
+			columns: ["To Do", "Doing", "Done"],
     };
   }
 
@@ -43,10 +44,14 @@ class App extends Component {
 
         {/* Edit the title/description/priority of a card */}
 
-        <Landing />
         <Navbar />
-        <Column />
-        <AddList />
+        <Landing />
+        
+				{this.state.columns.map(entry => {
+					return <Column name={entry} />
+				})}
+        
+				<AddList />
       </div>
     );
   }
