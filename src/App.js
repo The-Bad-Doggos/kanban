@@ -1,51 +1,55 @@
-import React, { Component } from 'react';
-import './App.css';
-import Landing from "./components/Landing.js";
-import Something from "./Something"
+
+import React, { Component } from "react";
+import "./App.css";
+import Landing from "./components/Landing";
+import Navbar from "./components/Navbar";
+import Column from "./components/Column";
+import AddList from "./components/AddList";
 
 class App extends Component {
-	constructor() {
-		super();
-		this.state = {
-			// In state, we want an obj that will contain the TITLE, DESCRIPTION, PRIORITY, CURRENT STATE (To Do, Doing, Done) for each task
+  constructor() {
+    super();
+    this.state = {
+      // In state, we want an obj that will contain the TITLE, DESCRIPTION, PRIORITY, CURRENT STATE (To Do, Doing, Done) for each task
 
-			tasks: []
-		};
-	}
-	
-	render() {
-		return (
-			 <div className="App">
-				{/* Show a landing page to give the user a brief overview of site */}
-				<Landing />
-				{/* Show an empty kanban board with 3 columns, and a + to add more */}
+      tasks: [],
+    };
+  }
 
-				{/* each column should have a "+" to add cards */}
+  render() {
+    return (
+      <div className="App">
+        {/* Show a landing page to give the user a brief overview of site */}
 
-				{/* Maybe?? A modal pop up for the user to fill out the details of tasks (title, description, priority); ok/submit button */}
+        {/* Show an empty kanban board with 3 columns, and a + to add more */}
 
-				{/* .onSubmit Update this.setState with task */}
+        {/* each column should have a "+" to add cards */}
 
-				{/* Create a card template */}
+        {/* Maybe?? A modal pop up for the user to fill out the details of tasks (title, description, priority); ok/submit button */}
 
-				{/* pass the this.state.task to <Card /> to render in the appropriate column */}
+        {/* .onSubmit Update this.setState with task */}
 
-				{/* "X" button on the card to delete card; .onDelete remove from this.state.task */}
+        {/* Create a card template */}
 
-				{/* Click and drag to move cards between columns */}
+        {/* pass the this.state.task to <Card /> to render in the appropriate column */}
 
-				{/* Click and drag to move cards within columns */}
+        {/* "X" button on the card to delete card; .onDelete remove from this.state.task */}
 
-				{/* Delete a whole column -- Error handling: If col.length > 0 Error popup "please select where to move cards before deleting?" */}
+        {/* Click and drag to move cards between columns */}
 
-				{/* Edit the title/description/priority of a card */}
+        {/* Click and drag to move cards within columns */}
 
-				<Something />
-				<h1>The Bad Doggos Were Here</h1>
-			 </div>
-		);
+        {/* Delete a whole column -- Error handling: If col.length > 0 Error popup "please select where to move cards before deleting?" */}
 
-	}
+        {/* Edit the title/description/priority of a card */}
+
+        <Landing />
+        <Navbar />
+        <Column />
+        <AddList />
+      </div>
+    );
+  }
 }
 
 export default App;
