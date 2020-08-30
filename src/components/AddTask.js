@@ -1,11 +1,18 @@
 import React from "react";
 
+const addCard = () => {
+	alert("clikced")
+}
+
 const AddTask = () => {
   return (
     <div>
-      <p>
-        <span>+</span> Add another card
-      </p>
+			<button title="Add another card" onClick={addCard}>
+				<i class="fas fa-plus"></i>
+				<p>
+					Add Card
+				</p>
+			</button>
     </div>
   );
 };

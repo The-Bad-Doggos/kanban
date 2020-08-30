@@ -1,4 +1,5 @@
 import React from "react";
+import Cards from "./Cards"
 import AddTask from "./AddTask";
 
 const Column = ({ name }) => {
@@ -6,7 +7,8 @@ const Column = ({ name }) => {
     <div>
       <h3>{name}</h3>
       <div>
-        <p>Task will go here</p>
+				<Cards />
+        {/* <p>Task will go here</p> */}
       </div>
       <AddTask />
     </div>
