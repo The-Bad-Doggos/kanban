@@ -1,13 +1,19 @@
 import React from "react";
 
-const AddTask = () => {
+const addTask = () => {
   return (
-    <div>
-      <p>
-        <span>+</span> Add another card
-      </p>
+    <div className="addTask">
+      <button className="addTask__button">+</button>
+      <label for="addTask"></label>
+      <input
+        type="text"
+        id="addTask"
+        name="addTask"
+        placeholder="Add New Task"
+        className="addTask__input"
+      />
     </div>
   );
 };
 
-export default AddTask;
+export default addTask;

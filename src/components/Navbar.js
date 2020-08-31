@@ -2,9 +2,11 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div>
-      <h1>The Bad Doggos</h1>
-    </div>
+    <header className="header">
+      <div className="header__wrapper">
+        <h1>The Bad Doggos</h1>
+      </div>
+    </header>
   );
 };
 

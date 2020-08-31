@@ -1,0 +1,26 @@
+.column {
+  width: 30rem;
+  border: 1px solid $secondary;
+  background-color: $primary;
+  margin: 0 2rem;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  &:first-child,
+  &:last-child {
+    margin: 0;
+  }
+  &__wrapper {
+    max-width: 28rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__title {
+    @include text(inherit, 2rem, $secondary);
+    background-color: $highlight;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+  }
+  &__body {
+    @include text(inherit, 1.8rem, $quinternary);
+  }
+}
