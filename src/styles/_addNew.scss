@@ -1,0 +1,18 @@
+.addTask {
+  margin: 1rem 0;
+  &__button,
+  &__input {
+    height: 4rem;
+    border: none;
+    background-color: $tertiary;
+    color: $quinternary;
+  }
+  &__button {
+    width: 10%;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  &__input {
+    width: 90%;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}

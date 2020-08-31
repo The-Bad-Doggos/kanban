@@ -1,20 +1,27 @@
 import React from "react";
 
+
 const addCard = () => {
 	alert("clikced")
 }
 
-const AddTask = () => {
+const addTask = () => {
   return (
-    <div>
-			<button title="Add another card" onClick={addCard}>
-				<i class="fas fa-plus"></i>
-				<p>
-					Add Card
-				</p>
-			</button>
+    <div className="addTask">
+      <button className="addTask__button" onClick={addCard} title="Add another card" >				
+        <i class="fas fa-plus"></i>
+      </button>
+      <label for="addTask"></label>
+      <input
+        type="text"
+        id="addTask"
+        name="addTask"
+        placeholder="Add New Task"
+        className="addTask__input"
+      />
+
     </div>
   );
 };
 
-export default AddTask;
+export default addTask;
