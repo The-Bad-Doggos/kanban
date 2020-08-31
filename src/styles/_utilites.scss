@@ -1,0 +1,12 @@
+$primary: #515151;
+$secondary: #070707;
+$tertiary: #333333;
+$quarternary: #686868;
+$quinternary: #c7c9c8;
+$highlight: #ffa529;
+
+@mixin text($fontFamily, $fontSize, $color) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $color;
+}

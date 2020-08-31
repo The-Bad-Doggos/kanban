@@ -1,0 +1,12 @@
+.header {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  background-color: $secondary;
+  color: $quinternary;
+  &__wrapper {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
