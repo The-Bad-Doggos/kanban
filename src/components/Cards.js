@@ -4,7 +4,12 @@ const Cards = () => {
 	return (
 		<div className="card__background">
 			<form action="" className="card__modal card__wrapper">
-				<h1>Card Goes Here</h1>
+				<header>
+					<h1>Create a New Task</h1>
+					<button title="Close window">
+						<i class="far fa-times-circle"></i>
+					</button>
+				</header>
 				<fieldset>
 					<label htmlFor="card__title">
 						Title:

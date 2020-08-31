@@ -11,6 +11,27 @@
 	background-color: $quinternary;
 	padding: 10%;
 	text-align: center;
+
+	header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		button {
+			border: none;
+			background: transparent;
+			position: absolute;
+			right: -50px;
+			top: -50px;
+		}
+		
+		i {
+			// text-shadow: 1px 1px red;
+			color: $secondary;
+			font-size: 3rem;
+		}
+	}
 }
 
 .card__wrapper {
