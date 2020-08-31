@@ -4,13 +4,17 @@ import AddTask from "./AddTask";
 
 const Column = ({ name }) => {
   return (
-    <div>
-      <h3>{name}</h3>
-      <div>
+
+    <div className="column">
+      <div className="column__wrapper">
+        <h3 className="column__title">{name}</h3>
 				<Cards />
-        {/* <p>Task will go here</p> */}
+        {/* The h3 above should be an input so it can be edited by the user */}
+        <div className="column__body">
+          <AddTask />
+        </div>
+
       </div>
-      <AddTask />
     </div>
   );
 };

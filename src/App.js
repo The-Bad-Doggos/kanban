@@ -1,10 +1,8 @@
-
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
-import Column from "./components/Column";
-import AddList from "./components/AddList";
+import Board from "./components/Board";
 
 class App extends Component {
   constructor() {
@@ -12,8 +10,8 @@ class App extends Component {
     this.state = {
       // In state, we want an obj that will contain the TITLE, DESCRIPTION, PRIORITY, CURRENT STATE (To Do, Doing, Done) for each task
 
-			tasks: [],
-			columns: ["To Do", "Doing", "Done"],
+      tasks: [],
+      columns: ["To Do", "Doing", "Done"],
     };
   }
 
@@ -21,8 +19,6 @@ class App extends Component {
     return (
       <div className="App">
         {/* Show a landing page to give the user a brief overview of site */}
-
-        {/* Show an empty kanban board with 3 columns, and a + to add more */}
 
         {/* each column should have a "+" to add cards */}
 
@@ -45,13 +41,8 @@ class App extends Component {
         {/* Edit the title/description/priority of a card */}
 
         <Navbar />
-        <Landing />
-        
-				{this.state.columns.map(entry => {
-					return <Column name={entry} />
-				})}
-        
-				<AddList />
+        {/* <Landing /> */}
+        <Board name={this.state.columns} />
       </div>
     );
   }
