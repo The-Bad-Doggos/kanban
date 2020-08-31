@@ -3,6 +3,7 @@ import "./App.scss";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
 import Board from "./components/Board";
+import Cards from "./components/Cards"
 
 class App extends Component {
   constructor() {
@@ -43,6 +44,7 @@ class App extends Component {
         <Navbar />
         {/* <Landing /> */}
         <Board name={this.state.columns} />
+				<Cards />
       </div>
     );
   }

@@ -148,7 +148,8 @@ progress {
   vertical-align: baseline;
 }
 textarea {
-  overflow: auto;
+	overflow: auto;
+	resize: none;
 }
 [type="checkbox"],
 [type="radio"] {
